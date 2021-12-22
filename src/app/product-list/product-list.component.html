@@ -1,7 +1,6 @@
 <h2>Products</h2>
 
 <div *ngFor="let product of products">
-
   <h3>
       <a 
         [title]="product.name + ' details'"
@@ -24,6 +23,11 @@
     (notify)="onNotify()">
   </app-product-alerts>
 
+  <a [title]="product.name + ' details'">
+    {{ product.name }}
+  </a>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
 </div>
 
 <!-- 
